@@ -79,7 +79,7 @@ const AddCoffee = () => {
                 </div>
                 <div className="mt-4">
                     <div className=" form-control w-full ">
-                    <button className='btn'>Update coffee Details</button>
+                    <button className='btn'>Add coffee Details</button>
                     </div>
                 </div>
             

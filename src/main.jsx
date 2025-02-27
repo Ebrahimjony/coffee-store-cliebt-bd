@@ -7,7 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from './Components/Root.jsx';
-import UpdateCoffee from './Components/updateCoffee.jsx';
+import UpdateCoffee from './Components/UpdateCoffee.jsx';
 
 
 const router = createBrowserRouter([
@@ -21,8 +21,9 @@ const router = createBrowserRouter([
         element: <AddCoffee></AddCoffee>,
       },
       {
-        path: "/update",
-        element:<UpdateCoffee></UpdateCoffee>
+        path: "/update/:id",
+        element:<UpdateCoffee></UpdateCoffee>,
+        loader:({params})=>fetch(`http://localhost:5000/coffees/${params.id}`)
       },
     ],
   },
